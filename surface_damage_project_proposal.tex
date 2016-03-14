@@ -1,0 +1,235 @@
+\documentclass[dvips,12pt]{article}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
+\usepackage{enumerate}
+
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+
+
+\begin{document}
+
+
+\title{Study of the Si-SiO$_2$~interface damage and its interplay with the bulk damage}
+\author{M.~Bomben, A.~Ducourthial, A.~Morozzi,  F.~Moscatelli, D.~Passeri and J.~Zhang}
+\date{\today}
+
+
+
+\maketitle
+
+\begin{abstract}
+In silicon radiation sensors not only the bulk but also the Si-SiO$_2$~interface can be severely 
+affected by radiation damage. This is true not only for sensors aimed at the HL-LHC detectors 
+but also for those conceived to be used at X-ray free electron laser facilities like the European XFEL. 
+In this project proposal we want to address this topic by combining a mixed irradiation program 
+(photons and reactor neutrons) with TCAD simulations, the latter to be used to interpret the 
+measurements performed on irradiated sensors. The final goal is to develop an effective model 
+for n- and p-type bulk sensors for bulk and surface radiation damage to be used in TCAD 
+simulations.
+
+\end{abstract}
+
+
+\section{Introduction}
+
+During the High Luminosity phase of the LHC (HL-LHC)~\cite{HL-LHC} the innermost layers of 
+ the trackers' experiments will have to 
+withstand, integrated over 10 year of data-taking,
+  fluences of $\Phi = $1-2$\times$10$^{16}{\rm n_{eq}/cm^2}$  and total ionising doses of the order 
+  of  
+ TID~=~10~MGy. Experiments at the European X-ray Free Electron Laser (XFEL) require silicon 
+ pixel sensors which can withstand X-ray doses up to 100 Grad~\cite{zhang-thesis}.
+ 
+ Non ionising energy loss (NIEL) is the only relevant radiation damage effect for the 
+ bulk of silicon radiation sensors; ionising energy loss is the dominant effect for what concerns 
+ SiO$_2$ and Si-SiO$_2$~interface radiation damage.
+ Both mechanisms introduce defects in the silicon forbidden bandgap; ionising energy loss is 
+ also responsible for the increase of the fixed oxide charge. Both bulk and surface defects 
+ can be charged, as they act as carrier traps; they can also act as generation sites. Hence, 
+ both kind of defects determine a change of working 
+ voltages\footnote{depletion voltage in diodes, flat band voltage in MOS structures}, a decrease 
+ of the signal amplitude and an increase of leakage current, both bulk- and surface-generated.
+
+In order to interpret the observed phenomena after detectors irradiations,
+ and to make valid predictions for irradiated silicon 
+sensors performances, an effective parametrisation of the radiation damage effects is needed. 
+Several attempts have been made in the past, separately for bulk and surface damage. 
+Recently an effort started to develop a radiation damage parametrisation that includes both 
+surface and bulk damage~\cite{Passeri2015}, aimed at sensors designed for the HL-LHC 
+phase.
+
+An extensive study of surface radiation damage has been carried out for the sensors 
+for Science at the XFEL; a detailed summary can be found at~\cite{zhang-thesis}.
+Those studies deal with n-bulk material sensors; in this project we want to apply the 
+same approach for those studies to p-bulk material sensors too.
+
+The tools to verify the correctness of the new radiation damage model and then to make 
+sound predictions are TCAD\footnote{Technology Computer Aided Design} simulations. 
+
+In order to get reliable predictions from TCAD simulations, the latter have to be validated 
+on data from irradiated samples. X- and $\gamma-$Rays will be considered in our project, as 
+well as reactor neutrons.
+Photon irradiation will create defects at the surface and will make the fixed oxide charge increase. 
+Reactor neutrons will damage only the silicon bulk. In this way we can disentangle the two 
+radiation damage mechanisms.  
+
+In Section~\ref{sec:goals} the project goals will be presented. After having outlined the methods 
+(Section~\ref{sec:methods}), in Section~\ref{sec:ressources} the needed ressources will be 
+presented. The Section~\ref{sec:timeline} will present a tentative timeline for the project. 
+
+\section{Project goals}
+\label{sec:goals}
+The following list contains the main project goals:
+\begin{itemize}
+\item Irradiate test structures 
+\begin{enumerate}[a)]
+\item  first with X-rays or 
+\item $\gamma-$rays and then with 
+\item reactor neutrons
+\end{enumerate}
+\item Perform measurements on the irradiated test structures to study parameters like: 
+\begin{enumerate}[a)]
+\item the rate of change of depletion voltage  as a function of the integrated fluence,
+\item same for the leakage current
+\item and for trapping, plus
+\item flat-band voltage shift,
+\item the increase of leakage current due to the surface damage and
+\item the increase of the fixed oxide charge
+\end{enumerate}
+\item Analyse the results to extract fundamental parameters like
+\begin{enumerate}[a)] 
+\item a minimal set of effective bulk defects
+\item a minimal set of effective surface defects
+\end{enumerate}
+\item Use TCAD simulations to 
+\begin{enumerate}[a)] 
+\item reproduce the results drawn from irradiated samples measurements and
+\item make predictions for interesting scenarios like those expected at LH-LHC and XFEL
+\end{enumerate}
+\end{itemize}
+
+Interesting test structures are: diodes, MOS capacitors, gated diodes, interstrip resistance and 
+capacitance measurement dedicated structures.
+
+\section{Methods}
+\label{sec:methods}
+To meet the project goals presented in Section~\ref{sec:goals} the following test structures 
+and facilities are necessary, both n-type and p-type.
+\paragraph{Test structures} As already mentioned, interesting test structures are: diodes, MOS 
+capacitors, gated diodes, interstrip resistance- and 
+capacitance-measurement dedicated structures.
+Diodes will allow to extract bulk depletion voltage $V_{depl}$ and leakage current $I_{leak}$
+ increase with fluence/dose. 
+MOS capacitors give access to the value of fixed oxide charge $N_{ox}$ density and to the energy 
+ $E_{it}$ and distribution  $D_{it}(E_{it})$ of effective surface defects. Gated diodes 
+are crucial to measure the surface generated current density $J_{surf}$. 
+Diodes can also be used to measure the radiation damage induced signal reduction and obtain 
+a trapping time constant $\tau_{tr}$ estimate. Interstrip resistance- and 
+capacitance-measurement dedicated structures are very useful to study surface properties 
+of irradiated sensors like the fixed oxide charge $N_{ox}$ density.
+
+\noindent Avoiding the presence of p-spray in test structures that were taken from
+ n-on-p or n-on-n productions is crucial to perform measurements on MOS 
+capacitors and gated diodes in an optimal way.
+\noindent The authors have already some test structures in hand; those  were obtained from different 
+FBK productions. 
+
+\paragraph{Irradiation facilities}
+X- and $\gamma$-rays irradiation facilities are sought for, and neutron reactors as well.
+In the past similar studies were carried out at:
+\begin{itemize}
+\item x-ray tubes in Hambrug (FSDs) ({\it please provide some information here})
+\item similar facility in Padua ({\it please provide some information here})
+\item synchrotron in DESY({\it please provide some information here})
+\item $^{60}$Co source ({\it needed? Availability?})
+\item TRIGA Mark II research reactor at the Jo\v{z}ef Stefan Institute (JSI)  
+\end{itemize}
+\noindent Sought doses and fluences:
+\begin{itemize}
+\item doses: 50krad, 200krad, 2Mrad, 5Mrad, 10Mrad, 100Mrad and 1Grad (for HL-LHC 
+applications)
+\item fluences: $1\times10^{13}$,  $3\times10^{13}$, $1\times10^{14}$, $3\times10^{14}$, 
+$1\times10^{15}$, $3\times10^{15}$, $1\times10^{16}$ and $2\times10^{16}\,{\rm n_{eq}/cm^2}$.
+\end{itemize}
+
+\noindent The number of irradiations we will able to carry out will of course depend on the 
+number of test structures we have and on the availability of the sources/facilities. Priorities 
+will be identified among the aforementioned fluences and doses once number of test structures 
+and  availability of the sources/facilities will be known.
+
+\paragraph{Measurement set-ups} At the moment four laboratories have been identified: Hamburg, CNR-IMM Bologna, LPNHE Paris and CERN.
+
+\subparagraph{On diodes} I-V and C-V measurements will be performed; these 
+measurements are possible with Semiconductor Device Parameter Analyzer or 
+with even simpler systems; such tools are available in Hamburg, CNR-IMM Bologna, in LPNHE Paris
+and at CERN. 
+
+\subparagraph{On gated diodes} I-V curves can be measured at the same laboratories
+ already mentioned.
+
+\subparagraph{On MOS capacitors}  C/G-V measurements can be performed in Hamburg, CNR-
+IMM Bologna, in  LPNHE Paris and at CERN. Thermal Dielectric Relaxation Current (TDRC) 
+measurement allows to extract the energy 
+ $E_{it}$ and distribution  $D_{it}(E_{it})$ of effective surface defects; this kind of measurement 
+ is possible in Hamburg and at CNR-IMM Bologna.
+
+\subparagraph{On  interstrip resistance- and capacitance-measurement dedicated test structures} 
+the interstrip isolation  can be studied  using 
+Semiconductor Device Parameter Analyzer or with even simpler systems available in Hamburg, CNR-IMM Bologna, in LPNHE Paris
+and at CERN. 
+
+\noindent In all cases below room temperature set-ups are available.
+
+\paragraph{TCAD simulation tools}The plan is to use TCAD 2D and 3D simulation tools 
+to reproduce the measurement data. LPNHE Paris and University of Perugia have access to 
+Silvaco and Synopsys TCAD simulation tools, respectively. 
+
+\section{Ressources requests}
+
+\paragraph{Test structures}More test structures are needed. The proponents are already 
+in contact with the following foundries/groupes: FBK, KEK/HPK and Micron.
+\paragraph{Irradiation facilities}The proponents will apply for AIDA-2020 support for irradiation 
+campaign at TRIGA reactor. Access to Hamburg and Padua source is under investigation.
+\paragraph{Measurement facilities} Access to Hamburg measurement facilities (TDRC in 
+particular) has to be negotiated. Access to CERN Silicon Lab will be asked. 
+Financial support for travel expenses would be a plus; two 
+PhD students are involved in this project.
+\paragraph{TCAD simulations}Both LPNHE Paris and University of Perugia have access to 
+TCAD simulation tools so in principle no further support is needed here.
+
+
+\label{sec:ressources}
+
+\section{Timeline}
+\label{sec:timeline}
+{\it very tentative}
+
+\begin{enumerate}[1)]
+\item File the proposal well before the next RD50 meeting (foreseen on 6-8 June); let's say end of 
+April.
+\item Meanwhile survey the market for more test structures: ask CNM too? Reiterate with Micron; 
+have a first list of replies (and available structures) by mid-May.
+\item Start the discussion with Hamburg group by presenting them a draft of the project proposal, 
+after having included the list of samples of the previous point; late May.
+\item Present the project at the RD50 meeting.
+\item Get approved and supported by the RD50 collaboration - I am not sure about the official 
+procedure, that's why I am in favour of filing a draft to Micheal and Gianluigi to get advice and know 
+the technicalities.
+\item Start doing pre-irradiation measurements - from mid June onward.
+\item First irradiations - late June, July
+\item First measurements of irradiated detectors - if possible start in July
+\item First simulations - July
+\end{enumerate}
+At this point I won't progress any further due to the limited amount of information we have at the 
+moment.
+
+\bibliography{biblio}
+\bibliographystyle{IEEEtran}
+
+
+\end{document}
